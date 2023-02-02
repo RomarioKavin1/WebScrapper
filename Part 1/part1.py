@@ -15,7 +15,7 @@ def extract_record(item):
     taga=item.h2.a
     name=taga.text.strip()
     try:
-        produrl='https://www.amazon.com'+taga.get('href')
+        produrl='https://www.amazon.in'+taga.get('href')
         price=item.find('span','a-price-whole').text
     except AttributeError:
         return
